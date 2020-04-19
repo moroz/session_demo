@@ -1,0 +1,10 @@
+= form_for @conn, Routes.session_path(@conn, :create), [method: :post], fn f ->
+  label
+    | 電子郵件：
+    = text_input f, :email
+
+  label
+    | 密碼：
+    = password_input f, :password
+
+  = submit "送出"
